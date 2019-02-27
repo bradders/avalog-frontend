@@ -1,0 +1,73 @@
+/*------------------------------------*\
+    $Highlights
+\*------------------------------------*/
+.highlight, %highlight {
+  position: relative;
+  display: inline-block;
+  @include font-size(18);
+  background: linear-gradient(to top,rgba($blue,.4) 35%,transparent 35%);
+
+  &:hover, &:active, &:focus {
+    cursor: pointer;
+    background: linear-gradient(to top,rgba($blue, .4) 90%,transparent 90%);
+  }
+
+}
+
+.highlight--link {
+
+}
+
+.highlight--1 {
+  background: linear-gradient(to top,rgba($color-1,.4) 35%,transparent 35%);
+
+  &:hover, &:active, &:focus {
+    background: linear-gradient(to top,rgba($color-1, 1) 100%,transparent 100%);
+  }
+
+}
+
+.highlight--2 {
+  background: linear-gradient(to top,rgba($color-2,.4) 35%,transparent 35%);
+
+  &:hover, &:active, &:focus {
+    background: linear-gradient(to top,rgba($color-2, 1) 100%,transparent 100%);
+  }
+
+}
+
+.highlight--3 {
+  background: linear-gradient(to top,rgba($color-3,.4) 35%,transparent 35%);
+
+  &:hover, &:active, &:focus {
+    background: linear-gradient(to top,rgba($color-3, 1) 100%,transparent 100%);
+  }
+
+}
+
+.highlight--4 {
+  background: linear-gradient(to top,rgba($color-4,.4) 35%,transparent 35%);
+
+  &:hover, &:active, &:focus {
+    background: linear-gradient(to top,rgba($color-4, 1) 100%,transparent 100%);
+  }
+
+}
+
+.highlight--5 {
+  background: linear-gradient(to top,rgba($color-5,.4) 35%,transparent 35%);
+
+  &:hover, &:active, &:focus {
+    background: linear-gradient(to top,rgba($color-5, 1) 100%,transparent 100%);
+  }
+
+}
+
+.highlight--6 {
+  background: linear-gradient(to top,rgba($color-6,.4) 35%,transparent 35%);
+
+  &:hover, &:active, &:focus {
+    background: linear-gradient(to top,rgba($color-6, 1) 100%,transparent 100%);
+  }
+
+}

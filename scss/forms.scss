@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    $Forms
+\*------------------------------------*/
+input, select, textarea {
+  @include font-size(16);
+  background-color: white;
+}
+
+.input--text {
+  line-height: 1;
+  border: 1px solid $blue-brand-1-6;
+}

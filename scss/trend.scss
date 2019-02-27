@@ -1,0 +1,229 @@
+/*------------------------------------*\
+    $Trend
+\*------------------------------------*/
+.trend {
+  width: calc(100% + 2rem);
+  margin-left: -2rem;
+  padding: 2rem 0;
+}
+
+.scroller {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-flow: row nowrap;
+  max-width: 100%;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.scroller__item {
+  flex: 0 0 auto;
+}
+
+.trend__days {
+  margin: 0 0 1rem 0;
+  padding: 2rem 0 0 1rem;
+}
+
+.trend__day {
+  position: relative;
+  margin-right: 1rem;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(50% - 1px);
+    width: 1px;
+    height: 100%;
+    z-index: 1;
+    border-right: 1px dashed #E9ECF4;
+    transform: translateX(-50%);
+  }
+
+}
+
+.trend__day:last-of-type {
+
+  .trend__rating {
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 10rem;
+      top: -2rem;
+      right: 0;
+      line-height: 1.5rem;
+      @include font-size(12);
+      text-align: right;
+      text-transform: uppercase;
+    }
+
+    &:nth-child(2) {
+
+      &:before {
+        content: "Alpine";
+      }
+
+    }
+
+    &:nth-child(3) {
+      &:before {
+        content: "Treeline";
+      }
+    }
+
+    &:nth-child(4) {
+      &:before {
+        content: "Below Treeline";
+      }
+    }
+
+  }
+
+}
+
+.trend__link {
+  display: block;
+}
+
+.trend__day__label {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+  padding: .5rem;
+  margin: 0 0 3rem 0;
+  min-width: 5rem;
+  border-radius: 8px;
+  @extend %text--center;
+  color: $body-copy;
+  @include font-size(14);
+  //font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  background-color: #E9ECF4;
+
+  span {
+    display: block;
+    line-height: 1.25;
+  }
+
+}
+
+.trend__day--today {
+
+  &:before {
+    content: attr(data-day);
+    display: block;
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    width: 100%;
+    height: 2rem;
+    color: white;
+    line-height: 2;
+    text-align: center;
+    text-transform: uppercase;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom: 1px solid white;
+    @include font-size(12);
+    background-color: #124182;
+  }
+
+  .trend__day__label {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    color: white;
+    border-color: transparent;
+    background-color: $blue-primary;
+  }
+
+}
+
+.trend__day--future {
+
+  .trend__day__label {
+    border: 2px dashed $body-copy;
+  }
+
+}
+/*.trend__day--future {
+
+  &:before {
+    content: attr(data-day);
+    display: block;
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    width: 100%;
+    height: 2rem;
+    color: white;
+    line-height: 2;
+    text-align: center;
+    text-transform: uppercase;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    @include font-size(12);
+    background-color: #b0bac7;
+  }
+
+  .trend__day__label {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-color: #b0bac7;
+    background-color: #c5d0de;
+  }
+
+}
+*/
+
+.trend__ratings {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.trend__rating {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+}
+
+.dot {
+  position: relative;
+  z-index: 2;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  text-indent: -9999px;
+  border: 2px solid $body-copy;
+
+  &.is-streak:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -5.5rem;
+    width: 6.4rem;
+    height: 2rem;
+    z-index: 1;
+    border-top: 2px solid $body-copy;
+    border-bottom: 2px solid $body-copy;
+    //opacity: .5;
+    border-radius: 0;
+  }
+
+}

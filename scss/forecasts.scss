@@ -1,0 +1,103 @@
+/*------------------------------------*\
+    $Forecasts
+\*------------------------------------*/
+.forecast__date {
+  display: block;
+
+  @media #{$medium-up} {
+    display: inline-block;
+  }
+
+}
+
+
+/*------------------------------------*\
+    $Ratings
+\*------------------------------------*/
+.forecast__ratings {
+  @extend %flex;
+  @extend %f--row;
+  @extend %j--between;
+  @extend %mb-1;
+}
+
+.forecast__rating {
+  @extend %flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  flex-basis: 100%;
+
+  @media #{$small-up} {
+    flex-basis: 33%;
+    flex-flow: column wrap;
+    justify-content: space-between;
+  }
+
+}
+
+.forecast__rating__title {
+  @extend %flex;
+  @extend %a--center;
+  @include font-size(16);
+  text-align: center;
+  min-height: 4rem;
+  display: none;
+
+  @media #{$small-up} {
+    display: flex;
+    @include font-size(18);
+  }
+}
+
+.forecast__rating__subtitle {
+  display: block;
+  @extend %h3;
+
+  @media #{$small-up} {
+    display: none;
+  }
+
+}
+
+.forecast__rating__icon {
+  width: 6rem !important;
+  height: 6rem !important;
+  margin-right: 1rem;
+
+  @media #{$small-up} {
+    width: 7.5rem !important;
+    height: 7.5rem !important;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+}
+
+.forecast__rating__label {
+  @include font-size(15);
+
+  @media #{$small-up} {
+    @include font-size(18);
+  }
+
+}
+
+.buttons__share {
+  justify-content: space-around;
+
+  @media #{$medium-up} {
+
+  }
+
+  .btn {
+    flex-basis: 50%;
+  }
+
+}
+
+.forecast__highlights {
+  position: relative;
+  @extend %text--italic;
+  @include font-size(32);
+  font-family: $font-interface-bold;
+}

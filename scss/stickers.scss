@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    $Stickers
+\*------------------------------------*/
+.sticker {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: .5rem 1rem;
+  color: $blue-brand-1;
+  @include font-size(16);
+  letter-spacing: 0;
+  line-height: 1.6rem;
+  font-family: $font-base-stack;
+  border-radius: 1.8rem;
+  border: 1px solid transparent;
+  background-color: $blue-brand-1-6;
+
+  @media #{$medium-up} {
+    padding: 1rem 2rem;
+  }
+
+}
+
+.sticker--white {
+  border-color: #EAEDF2;
+  color: $body-copy;
+  background-color: white;
+}
+
+.sticker--s {
+  border-radius: .9rem;
+  padding: .5rem 1rem !important;
+}
+
+.sticker--rwd {
+  @include font-size(16);
+  border-radius: .9rem;
+  padding: .5rem;
+
+  @media #{$medium-up} {
+    @include font-size(18);
+    padding: 1rem 2rem;
+    border-radius: 1.8rem;
+  }
+
+}
+
+.sticker--rating {
+  color: $body-copy;
+}

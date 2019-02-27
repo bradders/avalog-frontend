@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    $Site
+\*------------------------------------*/
+html {
+  font-size: 62.5%;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  outline-color: $yellow-highlight;
+}
+
+body {
+  font-family: $font-base-stack;
+  @include font-size(18);
+  line-height: 1.5;
+  text-size-adjust: 100%;
+  color: $body-copy;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.site__main {
+  //padding: 3rem;
+}
+
+::selection {
+  background: $yellow-highlight;
+}
+
+::-moz-selection {
+  background: $yellow-highlight;
+}

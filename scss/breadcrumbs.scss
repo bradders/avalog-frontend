@@ -1,0 +1,58 @@
+/*------------------------------------*\
+    $Breadcrumb
+\*------------------------------------*/
+.breadcrumb {
+  float: left;
+  display: inline-block;
+}
+
+.nav__breadcrumb {
+  padding-left: 0;
+  margin: 0 0 2rem 0;
+  color: $white;
+
+  &:before {
+    content: "\000BB";
+    margin-top: .5rem;
+    margin-right: .5rem;
+  }
+
+  li {
+    display: inline-block;
+    padding: 0.3rem 0;
+    color: $white;
+
+    &:after {
+      content: "\000BB";
+      margin-right: .5rem;
+      margin-left: .5rem;
+    }
+
+    &:last-of-type:after {
+      display: none;
+    }
+
+  }
+
+  a {
+    display: inline-block;
+    font-weight: bold;
+    color: $white;
+    border: 2px solid transparent;
+
+    &:hover, &:focus, &:active {
+      border-bottom: 2px solid $white;
+    }
+
+  }
+
+  span {
+    display: inline-block;
+
+    span {
+      margin-top: .25rem;
+    }
+
+  }
+
+}

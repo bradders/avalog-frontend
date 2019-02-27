@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    $Radar Charts
+\*------------------------------------*/
+.chart {
+
+  path {
+    stroke-width: 2;
+  }
+
+}
+
+.chart--radar {
+  position: relative;
+  width: 24rem;
+  max-width: 100%;
+  height: 25rem;
+  margin: 0 auto;
+
+  @media #{$medium-up} {
+    height: 30rem;
+  }
+
+}

@@ -1,0 +1,52 @@
+/*------------------------------------*\
+    $Icons
+\*------------------------------------*/
+.icon {
+  width: 3rem;
+  display: inline-block;
+}
+
+.icon--s {
+  width: 2rem !important;
+  height: 2rem !important;
+}
+
+.icon--sm {
+  width: 3.5rem !important;
+  height: 3.5rem !important;
+}
+
+.icon--3, %icon--3 {
+  width: 5rem !important;
+}
+
+.icon--5, %icon--5 {
+  width: 5rem !important;
+  height: 5rem !important;
+}
+
+.icon--m {
+  width: 7.5rem !important;
+  height: 7.5rem !important;
+}
+
+.avatar {
+  display: inline-block;
+  border-radius: 50%;
+  width: 3.5rem;
+  min-width: 3.5rem;
+  height: 3.5rem;
+  border: .2rem solid $black;
+  padding: .2rem;
+  overflow: hidden;
+  object-fit: cover;
+  background-color: white;
+
+  &.avatar--s {
+    width: 2rem;
+    height: 2rem;
+    padding: .1rem;
+    border-width: 1px;
+  }
+
+}

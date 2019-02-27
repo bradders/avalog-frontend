@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    $Hero
+\*------------------------------------*/
+.hero {
+  @extend %flex;
+  min-height: 50vh;
+  margin-top: -7rem;
+  padding-top: 9rem;
+  margin-bottom: 3rem;
+  min-height: 75vh;
+  background-color: $blue;
+
+  @media #{$medium-up} {
+    margin-top: -11rem;
+    padding-top: 11rem;
+  }
+
+}
+
+//.bg--sky-day { background: linear-gradient(to bottom, #b7eaff 0%,#94dfff 100%); }
+//.bg--sky-alpenglow { background: linear-gradient(to bottom, #82addb 0%,#ebb2b1 100%); }
+//.bg--sky-dusk { background: linear-gradient(to bottom, #4a4969 0%,#7072ab 25%,#cd82a0 100%); }
+
+.pull--hero {
+  margin-top: -8rem;
+}
+
+.page--hero {
+
+  .site__main {
+    padding-top: 7rem;
+
+    @media #{$medium-up} {
+      padding-top: 13rem;
+    }
+  }
+
+}

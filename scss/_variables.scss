@@ -1,0 +1,97 @@
+/*------------------------------------*\
+    $Variables
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+    $Colour
+\*------------------------------------*/
+$body-copy: #02041B;
+$yellow-highlight: #fffdd1;
+
+$cardBorder: #eaedf2;
+$blue-light: #f6f8fb;
+
+$blue-brand-1: rgb(39, 95, 172);
+$blue-brand-1-6: rgba(39, 95, 172, .06);
+
+$black: #2d2d2d;
+$white: #fff;
+
+$body-copy: #333;
+$blue: #275FAC;
+//$blue: #2a58cf;
+$blue-dark: #114080;
+$blue-primary: $blue;
+$blue-secondary: #01BADE;
+$blue-tertiary: #E2F7FF;
+$blue-header: #1f53a5;
+$blue-border: #23559a;
+
+$rating-low: #00C021;
+$rating-moderate: #FFF500;
+$rating-considerable: #FF9C00;
+$rating-high: #FF4E00;
+$rating-extreme: #000;
+$rating-below-threshold: #c5d0de;
+
+$color-1: $rating-low;
+$color-2: $rating-moderate;
+$color-3: $rating-considerable;
+$color-4: $rating-high;
+$color-5: $rating-extreme;
+$color-6: $rating-below-threshold;
+
+$icon-water: #2b60ac;
+$icon-sun: #f5eb16;
+$icon-snow: $white;
+$icon-base: #108dc6;
+
+$grey: #ececec;
+$grey-text: #b0b0b1;
+$grey-disable: #e9edf1;
+$black10: rgba(0, 0, 0, 0.1);
+$black20: rgba(0, 0, 0, 0.2);
+$black50: rgba(0, 0, 0, 0.5);
+
+$orangeRss: #fd7800;
+
+$bg-header: #e9edf1;
+$bg-sidebar: #f1f4f8;
+$bg-main: #fafafa;
+
+$bg-quick: #67ab5b;
+$bg-weather: #f7c244;
+$bg-incident: #e35141;
+$bg-snowpack: #4054af;
+$bg-avalanche: #46a9ee;
+
+// Forms
+$error-red: #ed1c24;
+$success-green: #1bb934;
+
+$fav-yellow: #FFD566;
+$fav-yellow-alt: #FFF1CC;
+$yellow-subtle: #fff9b0;
+
+//Brands
+$brand-facebook: #4868ad;
+$brand-twitter: #4595da;
+
+
+/*------------------------------------*\
+    $Text
+\*------------------------------------*/
+$font-interface-extra-bold: "Interface Extra Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-interface-bold: "Interface Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-interface: "Interface Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-base-stack: $font-interface;
+
+
+/*------------------------------------*\
+    $Breakpoints
+\*------------------------------------*/
+$small-up: "only screen and (min-width: 48em)";
+$medium-up: "only screen and (min-width: 64em)";
+$large-up: "only screen and (min-width: 75em)";

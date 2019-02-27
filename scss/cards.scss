@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    $Cards
+\*------------------------------------*/
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  border: 1px solid $cardBorder;
+  background-color: white;
+  box-shadow: 0 .5rem 1.5rem 0 rgba(45, 45, 45, .08);
+}
+
+.card__top {
+  @extend %flex;
+  @extend %a--center;
+  @extend %j--between;
+  flex-flow: row wrap;
+  padding: 2rem;
+  border-bottom: 1px solid $cardBorder;
+  background-color: $blue-light;
+}
+
+.card__title {
+  margin-bottom: 0;
+  @include font-size(20);
+  line-height: 24px;
+}
+
+.card__content {
+  @extend %flex;
+  flex-flow: column wrap;
+  height: 100%;
+  padding: 2rem;
+}
+
+.card--trend {
+  overflow: hidden;
+}

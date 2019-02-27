@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    $Notice
+\*------------------------------------*/
+.notice {
+  @extend %flex;
+  @extend %a--center;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid $blue-brand-1;
+  background-color: #f3f5f9;
+
+  &.notice--yellow {
+    background-color: $yellow-highlight;
+  }
+
+}

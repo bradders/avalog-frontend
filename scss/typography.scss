@@ -1,0 +1,76 @@
+/*------------------------------------*\
+    $Typography
+\*------------------------------------*/
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $font-interface-extra-bold;
+  font-weight: inherit;
+  font-size: inherit;
+  margin-bottom: 1rem;
+}
+
+// 68 > 42 (Sketch)
+h1, .h1, %h1 {
+  @include font-size(42);
+  line-height: 4.5rem;
+  letter-spacing: -.5px;
+
+  @media #{$medium-up} {
+    @include font-size(68);
+    line-height: 7rem;
+  }
+
+}
+
+// 42 > 26 (Sketch)
+h2, .h2, %h2 {
+  @include font-size(26);
+  line-height: 3rem;
+  letter-spacing: -.5px;
+
+  @media #{$medium-up} {
+    @include font-size(42);
+    line-height: 4.5rem;
+  }
+
+}
+
+// 26 > 20 (Sketch)
+h3, .h3, %h3 {
+  @include font-size(20);
+  line-height: 2.4rem;
+  letter-spacing: -.5px;
+
+  @media #{$medium-up} {
+    @include font-size(26);
+    line-height: 3rem;
+  }
+}
+
+h4, .h4, %h4 {
+  @include font-size(18);
+  line-height: 2rem;
+}
+
+h5, .h5, %h5 {
+  @include font-size(18);
+  line-height: 2rem;
+}
+
+h6, .h6, %h6 {
+  @include font-size(18);
+  line-height: 2rem;
+}
+
+p {
+  width: 66rem;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  @include font-size(18);
+  line-height: 2.4rem;
+}
+
+strong, b {
+  font-family: $font-interface-bold;
+  font-weight: inherit;
+}

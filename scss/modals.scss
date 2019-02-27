@@ -1,0 +1,74 @@
+/*------------------------------------*\
+    $Modal
+\*------------------------------------*/
+.modal {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  opacity: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translateY(100%);
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: transparent;
+
+  transition-timing-function: cubic-bezier(.65,.05,.36,1);
+	transition-duration: 0.25s;
+	transition-property: transform, background-color;
+	transition-delay: 0s, 0.2s;
+
+  @media #{$medium-up} {
+    align-items: center;
+    transform: translateY(0) scale(0);
+  }
+
+  &.is--open {
+    opacity: 1;
+    z-index: 9999;
+    transform: translateY(0);
+    background-color: rgba(0, 0, 0, 0.6);
+
+    @media #{$medium-up} {
+      transform: translateY(0) scale(1);
+    }
+
+  }
+
+}
+
+.modal__card {
+  position: relative;
+  width: 60rem;
+  max-width: 100%;
+  height: 60rem;
+  max-height: 90%;
+  overflow: auto;
+  padding: 8rem 2rem 2rem 2rem;
+  border: 2px solid #d7d8d9;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  background-color: white;
+
+  @media #{$medium-up} {
+    border-radius: 8px;
+    height: auto;
+  }
+
+}
+
+.modal__close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.modal--plain {
+
+  .modal__card {
+    padding-top: 10rem;
+  }
+
+}
