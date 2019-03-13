@@ -18,6 +18,15 @@ export default function forms() {
     ajaxForms[i].addEventListener("submit", submitAjaxForm);
   }
 
+  var archiveSwitcher = document.getElementsByClassName("js-archive-switch");
+  for(var i = 0; i < archiveSwitcher.length; i++) {
+    archiveSwitcher[i].addEventListener("change", submitArchiveForm);
+  }
+
+}
+
+function submitArchiveForm() {
+  this.form.submit();
 }
 
 function autoSubmitForm() {
@@ -115,7 +124,6 @@ function submitAjaxForm(event) {
 	.then(function (response) {
 
     var data = response.data;
-    console.log(data);
 
     // Error
     if(data.error) {
@@ -125,7 +133,8 @@ function submitAjaxForm(event) {
 
     // Success
     if(!data.error) {
-
+      console.log("success");
+      console.log(data);
       resetForm(form);
       closeModals();
 
@@ -139,15 +148,20 @@ function submitAjaxForm(event) {
 	})
 	.catch(function (response) {
 
+    console.log("catch");
     console.log(response);
-    if(response.status == 401) {
 
-      displayFormErrors(form, []);
-      var formError = form.querySelectorAll(".form__error");
-      if(formError) {
-        formError[0].innerHTML = response.statusText;
-        formError[0].classList.remove("element--hide");
-      }
+    displayFormErrors(form, []);
+
+    var errorMessage = "Unspecified error, sorry. <a href='/contact' class='text--underline'>Contact us</a> if this problem persists.";
+    if(response.status == 401) {
+      errorMessage = response.statusText;
+    }
+
+    var formError = form.querySelectorAll(".form__error");
+    if(formError) {
+      formError[0].innerHTML = errorMessage;
+      formError[0].classList.remove("element--hide");
     }
 
   });

@@ -3,7 +3,7 @@
 \*------------------------------------*/
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: $font-interface-extra-bold;
+  font-family: var(--font-extra-bold);
   font-weight: inherit;
   font-size: inherit;
   margin-bottom: 1rem;
@@ -71,6 +71,6 @@ p {
 }
 
 strong, b {
-  font-family: $font-interface-bold;
+  font-family: var(--font-bold);
   font-weight: inherit;
 }

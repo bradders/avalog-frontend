@@ -1,3 +1,4 @@
+
 /*------------------------------------*\
     $Buttons
 \*------------------------------------*/
@@ -10,8 +11,14 @@
   line-height: 1.4;
   font-weight: inherit;
   cursor: pointer;
-  font-family: $font-base-stack;
-  border: 1px solid transparent;
+  font-family: var(--font-default);
+  border: 1px solid var(--color-button-border);
+}
+
+.btn--s {
+  line-height: 1;
+  padding: 1rem;
+  @include font-size(16);
 }
 
 .btn--icon {
@@ -19,7 +26,6 @@
 }
 
 .btn--white {
-  border-color: white;
   background-color: white;
 }
 
@@ -34,9 +40,15 @@
   background-color: $blue-primary;
 }
 
+.btn--tertiary {
+  color: var(--color-black);
+  background-color: $blue-tertiary;
+}
+
 .btn--error {
-  border-color: #e4b2ad;
-  background-color: #f8ebea;
+  border-color: var(--color-red-error);
+  background-color: $grey;
+  //background-color: var(--color-red-error-alt);
 }
 
 .btn--blue-6 {
@@ -65,4 +77,13 @@
 .btn__icon {
   @extend %flex;
   @extend %mr-1;
+
+  &.mr-0 {
+    margin-right: 0 !important;
+  }
+
+}
+
+.btn--circle {
+  border-radius: 50%;
 }

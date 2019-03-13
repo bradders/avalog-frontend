@@ -6,19 +6,15 @@
 /*------------------------------------*\
     $Colour
 \*------------------------------------*/
-$body-copy: #02041B;
-$yellow-highlight: #fffdd1;
-
-$cardBorder: #eaedf2;
 $blue-light: #f6f8fb;
 
 $blue-brand-1: rgb(39, 95, 172);
 $blue-brand-1-6: rgba(39, 95, 172, .06);
 
-$black: #2d2d2d;
-$white: #fff;
+//$black: #2d2d2d;
+//$white: #fff;
 
-$body-copy: #333;
+//$body-copy: #333;
 $blue: #275FAC;
 //$blue: #2a58cf;
 $blue-dark: #114080;
@@ -44,7 +40,7 @@ $color-6: $rating-below-threshold;
 
 $icon-water: #2b60ac;
 $icon-sun: #f5eb16;
-$icon-snow: $white;
+//$icon-snow: $white;
 $icon-base: #108dc6;
 
 $grey: #ececec;
@@ -77,17 +73,6 @@ $yellow-subtle: #fff9b0;
 //Brands
 $brand-facebook: #4868ad;
 $brand-twitter: #4595da;
-
-
-/*------------------------------------*\
-    $Text
-\*------------------------------------*/
-$font-interface-extra-bold: "Interface Extra Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-interface-bold: "Interface Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-interface: "Interface Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-base-stack: $font-interface;
-
 
 /*------------------------------------*\
     $Breakpoints

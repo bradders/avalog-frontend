@@ -10,7 +10,8 @@ export default function settings() {
 function editDevice(event) {
 
   var self = this;
-  var parentForm = self.parentNode.parentNode;
+  var parentForm = self.parentNode.parentNode.parentNode;
+
   var deviceHash = parentForm.getAttribute("data-device-hash");
   var extras = parentForm.querySelectorAll(".device__edit")[0];
 

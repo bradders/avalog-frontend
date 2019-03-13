@@ -1,0 +1,119 @@
+.archive__calendar {
+  @extend %flex;
+
+  tbody {
+    width: 100%;
+    @extend %flex;
+    flex-flow: column wrap;
+  }
+
+}
+
+.calendar__row {
+  @extend %flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.calendar__day, .calendar__header {
+  @extend %flex;
+  width: 14%;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.calendar__label {
+  @extend %flex;
+}
+
+a.calendar__label {
+  //background-color: yellow;
+}
+
+.calendar__day {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+
+  @media #{$medium-up} {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+.calendar__label {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 50px;
+  z-index: 1;
+  color: var(--color-black);
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50%;
+  line-height: 1rem;
+  text-indent: -9999px;
+  background-color: var(--color-black);
+
+  &:hover, &:active, &:focus {
+    cursor: default;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-indent: 0;
+    box-shadow: 0 0 0 .5rem var(--color-black);
+    text-indent: 0;
+    color: var(--color-white);
+  }
+
+}
+
+.calendar__label[data-rating] {
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  @include font-size(16);
+  text-indent: 0;
+  color: var(--color-white);
+
+  &:hover, &:active, &:focus {
+    cursor: pointer;
+    color: var(--color-black);
+  }
+
+}
+
+.calendar__label[data-rating="1"] {
+  color: var(--color-black);
+  background-color: $color-1;
+}
+
+.calendar__label[data-rating="2"] {
+  color: var(--color-black);
+  background-color: $color-2;
+}
+
+.calendar__label[data-rating="3"] {
+  color: var(--color-black);
+  background-color: $color-3;
+}
+
+.calendar__label[data-rating="4"] {
+  color: var(--color-black);
+  background-color: $color-4;
+}
+
+.calendar__label[data-rating="5"] {
+  color: var(--color-white);
+  background-color: $color-5;
+}
+
+.calendar__label[data-rating="6"] {
+  color: var(--color-black);
+  background-color: $color-6;
+}

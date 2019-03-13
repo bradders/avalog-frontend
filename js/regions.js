@@ -30,9 +30,14 @@ function loadRegionsList(regions) {
 
   if(current.length) {
 
+    regionsHtml += "<div class='card'>";
+
+    regionsHtml += "<div class='card__content'><h2>You Are Here</h2><ul>";
     for(var i = 0; i < current.length; i++) {
       regionsHtml += tmpl("region_tmpl", current[i]);
     }
+    regionsHtml += "</ul></div>";
+    regionsHtml += "</div>";
 
   }
 
@@ -40,9 +45,11 @@ function loadRegionsList(regions) {
 
     regionsHtml += "<h2>Nearby</h2>";
 
+    regionsHtml += "<ul>";
     for(var i = 0; i < nearby.length; i++) {
       regionsHtml += tmpl("region_tmpl", nearby[i]);
     }
+    regionsHtml += "</ul>";
 
   }
 

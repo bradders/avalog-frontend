@@ -9,7 +9,7 @@
   @include font-size(16);
   letter-spacing: 0;
   line-height: 1.6rem;
-  font-family: $font-base-stack;
+  font-family: var(--font-default);
   border-radius: 1.8rem;
   border: 1px solid transparent;
   background-color: $blue-brand-1-6;
@@ -22,7 +22,7 @@
 
 .sticker--white {
   border-color: #EAEDF2;
-  color: $body-copy;
+  color: var(--color-body-copy);
   background-color: white;
 }
 
@@ -45,5 +45,5 @@
 }
 
 .sticker--rating {
-  color: $body-copy;
+  color: var(--color-body-copy);
 }

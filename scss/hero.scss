@@ -3,16 +3,23 @@
 \*------------------------------------*/
 .hero {
   @extend %flex;
-  min-height: 50vh;
-  margin-top: -7rem;
-  padding-top: 9rem;
+  //margin-top: -7rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   margin-bottom: 3rem;
-  min-height: 75vh;
   background-color: $blue;
 
   @media #{$medium-up} {
-    margin-top: -11rem;
+    margin-top: 0;
     padding-top: 11rem;
+  }
+
+  &.hero--dark {
+    background-color: var(--color-black);
+  }
+
+  &.hero--tall {
+    min-height: 75vh;
   }
 
 }
@@ -26,12 +33,13 @@
 }
 
 .page--hero {
+  padding-top: 0;
 
   .site__main {
-    padding-top: 7rem;
+    //padding-top: 7rem;
 
     @media #{$medium-up} {
-      padding-top: 13rem;
+      padding-top: 9rem;
     }
   }
 

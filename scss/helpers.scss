@@ -22,6 +22,18 @@
   margin-bottom: 3rem !important;
 }
 
+.mb-10, %mb-10 {
+  margin-bottom: 10rem !important;
+}
+
+.mr-auto, %mr-auto {
+  margin-right: auto !important;
+}
+
+.mr-0, %mr-0 {
+  margin-right: 0 !important;
+}
+
 .mr-1, %mr-1 {
   margin-right: 1rem !important;
 }
@@ -38,6 +50,10 @@
   margin-left: auto !important;
 }
 
+.mt-1, %mt-1 {
+  margin-top: 1rem !important;
+}
+
 .mt-3, %mt-3 {
   margin-top: 3rem !important;
 }
@@ -46,8 +62,24 @@
   margin-top: auto !important;
 }
 
+.p-1, %p-1 {
+  padding: 1rem !important;
+}
+
+.p-2, %p-2 {
+  padding: 2rem !important;
+}
+
+.pt-1, %pt-1 {
+  padding-top: 1rem !important;
+}
+
 .pt-3, %pt-3 {
   padding-top: 3rem !important;
+}
+
+.pb-1, %pb-1 {
+  padding-bottom: 1rem !important;
 }
 
 .pb-3, %pb-3 {
@@ -60,6 +92,24 @@
 
 .pt-5, %pt-5 {
   padding-bottom: 5rem !important;
+}
+
+.pl-0, %pl-0 {
+  padding-left: 0 !important;
+}
+
+.pr-0, %pr-0 {
+  padding-right: 0 !important;
+}
+
+.text--14, %text--14 {
+  font-size: 14px !important;
+  font-size: 1.4rem !important;
+}
+
+.text--16, %text--16 {
+  font-size: 16px !important;
+  font-size: 1.6rem !important;
 }
 
 .text--18, %text--18 {
@@ -76,11 +126,20 @@
 }
 
 .text--white, %text--white {
-  color: white;
+  color: var(--color-white);
 }
 
 .text--blue, %text--blue {
   color: $blue-brand-1;
+}
+
+.text--error, %text--error {
+  color: var(--color-black);
+  background-color: var(--color-red-error);
+}
+
+.text--underline, %text--underline {
+  border-bottom: 1px solid currentColor;
 }
 
 .text--left, %text--left {
@@ -101,26 +160,35 @@
 }
 
 .font--interface-extra-bold, %font--interface-extra-bold {
-  font-family: $font-interface-extra-bold;
+  font-family: var(--font-extra-bold);
 }
 
 .font--interface-bold, %font--interface-bold {
-  font-family: $font-interface-bold;
+  font-family: var(--font-bold);
 }
 
 .font--interface, %font--interface {
-  font-family: $font-interface;
+  font-family: var(--font-default);
 }
 
 .element--hide {
-  display: none;
+  display: none !important;
 }
 
-.element--block {
+.element--block, %element--block {
   display: block;
 }
 
-.show--desktop {
+.only--small {
+  display: inherit !important;
+
+  @media #{$medium-up} {
+    display: none !important;
+  }
+
+}
+
+.only--medium {
   display: none !important;
 
   @media #{$medium-up} {
@@ -132,6 +200,14 @@
 .p--capped {
   width: 60rem;
   max-width: 100%;
+}
+
+.element--full, %element--full {
+  width: 100%;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 /*------------------------------------*\
@@ -198,15 +274,15 @@
     $SVG
 \*------------------------------------*/
 .svg__border {
-  fill: $black !important;
+  fill: var(--color-black) !important;
 }
 
 .svg__padding {
-  fill: $white !important;
+  fill: var(--color-white) !important;
 }
 
 .svg__icon {
-  fill: $black !important;
+  fill: var(--color-black) !important;
 }
 
 .svg__fill {
@@ -223,7 +299,7 @@
 }
 
 .svg__snow {
-  fill: $icon-snow !important;
+  fill: var(--color-white) !important;
 }
 
 .svg__sun {
@@ -259,11 +335,11 @@
 }
 
 .fill--black {
-  fill: $black;
+  fill: var(--color-black);
 }
 
 .fill--white {
-  fill: $white;
+  fill: var(--color-white);
 }
 
 .fill--blue {
@@ -288,6 +364,14 @@
 
 .fill--error-red-2 {
   fill: #f8ebea;
+}
+
+.fill--success-green {
+  fill: #d4edda;
+}
+
+.fill--success-green-2 {
+  fill: #155724;
 }
 
 /*.fill--yellow {
@@ -383,11 +467,27 @@
 }
 
 .bg--white, %bg--white {
-  background-color: $white;
+  background-color: var(--color-white);
 }
 
 .bg--blue-light, %bg--blue-light {
   background-color: $blue-light;
+}
+
+.bg--blue-alt, %bg--blue-alt {
+  background-color: #f1f5fd;
+}
+
+.bg--grey {
+  background-color: var(--color-grey);
+}
+
+.bg--likelihood {
+  background-color: var(--color-progress-likelihood);
+}
+
+.bg--size {
+  background-color: var(--color-progress-size);
 }
 
 .page--js {

@@ -38,6 +38,75 @@ export default function site() {
     externalLinks[i].setAttribute("target", "_blank");
   }
 
+  // Audio buttons
+  var audioButtons = document.getElementsByClassName("js-play-audio");
+  for(var i = 0; i < audioButtons.length; i++) {
+    audioButtons[i].addEventListener("click", playAudio);
+  }
+
+  // Stash page url/title
+  stashPageTitle();
+
+  var stickyElements = document.getElementsByClassName("is--sticky");
+  if(stickyElements.length) {
+
+    for(var i = 0; i < stickyElements.length; i++) {
+
+      var stickyElement = stickyElements[i];
+      var elementPosition = stickyElement.getBoundingClientRect().top;
+      var elementHeight = stickyElement.getBoundingClientRect().height;
+
+      stickyElement.setAttribute("data-waypoint", (elementPosition + elementHeight));
+
+      watchStickyElement(stickyElement);
+
+      document.addEventListener("scroll", function() {
+        watchStickyElement(stickyElement);
+      });
+
+    }
+
+  }
+
+}
+
+function watchStickyElement(stickyElement) {
+
+  var waypoint = stickyElement.getAttribute("data-waypoint");
+  var stickyTargetId = stickyElement.getAttribute("data-sticky-target");
+  var stickyTarget = document.getElementById(stickyTargetId);
+
+  stickyTarget.setAttribute("hidden", true);
+
+  if(window.scrollY >= waypoint) {
+    stickyTarget.removeAttribute("hidden");
+  }
+
+}
+
+function stashPageTitle() {
+
+  var pageTitles = [];
+
+  if(localStorage.pageTitles !== undefined) {
+    pageTitles = JSON.parse(localStorage.pageTitles);
+  }
+
+  var pageTitle = document.querySelector("title").innerText.replace(" — Avalog", "");
+  var pageHref = window.location.href;
+
+  var alreadyStashed = false;
+  for(var i = 0; i < pageTitles.length; i++) {
+    if(pageTitles[i][0] == pageHref) {
+      alreadyStashed = true;
+    }
+  }
+
+  if(alreadyStashed === false) {
+    pageTitles.push([pageHref, pageTitle]);
+    localStorage.pageTitles = JSON.stringify(pageTitles);
+  }
+
 }
 
 function scrollIt(element) {
@@ -112,6 +181,33 @@ function toggleSiteNav(event) {
   self.setAttribute("data-icon", buttonIcon);
 
   event.preventDefault();
+
+}
+
+function playAudio(event) {
+
+  event.preventDefault();
+
+  var self = this;
+  var audioId = self.getAttribute("data-audio-id");
+  var player = document.getElementById(audioId);
+  var iconPlay = self.querySelector("[data-icon-play]");
+  var iconPause = self.querySelector("[data-icon-pause]");
+
+  iconPlay.classList.remove("element--hide");
+  iconPause.classList.remove("element--hide");
+
+  if(player.paused) {
+
+    iconPlay.classList.add("element--hide");
+    player.play();
+
+  } else {
+
+    iconPause.classList.add("element--hide");
+    player.pause();
+
+  }
 
 }
 

@@ -21,7 +21,7 @@ html {
 
 body {
   line-height: 1.5;
-  color: $body-copy;
+  color: var(--color-body-copy);
   min-height: 100%;
 }
 

@@ -103,7 +103,7 @@
   min-width: 5rem;
   border-radius: 8px;
   @extend %text--center;
-  color: $body-copy;
+  color: var(--color-body-copy);
   @include font-size(14);
   //font-weight: 500;
   text-decoration: none;
@@ -152,39 +152,10 @@
 .trend__day--future {
 
   .trend__day__label {
-    border: 2px dashed $body-copy;
+    border: 2px dashed var(--color-body-copy);
   }
 
 }
-/*.trend__day--future {
-
-  &:before {
-    content: attr(data-day);
-    display: block;
-    position: absolute;
-    top: -2rem;
-    left: 0;
-    width: 100%;
-    height: 2rem;
-    color: white;
-    line-height: 2;
-    text-align: center;
-    text-transform: uppercase;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
-    @include font-size(12);
-    background-color: #b0bac7;
-  }
-
-  .trend__day__label {
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-    border-color: #b0bac7;
-    background-color: #c5d0de;
-  }
-
-}
-*/
 
 .trend__ratings {
   margin: 0;
@@ -210,7 +181,7 @@
   height: 2rem;
   border-radius: 50%;
   text-indent: -9999px;
-  border: 2px solid $body-copy;
+  border: 2px solid var(--color-body-copy);
 
   &.is-streak:before {
     content: "";
@@ -220,9 +191,8 @@
     width: 6.4rem;
     height: 2rem;
     z-index: 1;
-    border-top: 2px solid $body-copy;
-    border-bottom: 2px solid $body-copy;
-    //opacity: .5;
+    border-top: 2px solid var(--color-body-copy);
+    border-bottom: 2px solid var(--color-body-copy);
     border-radius: 0;
   }
 

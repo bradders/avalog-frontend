@@ -10,7 +10,7 @@
   background-color: #f3f5f9;
 
   &.notice--yellow {
-    background-color: $yellow-highlight;
+    background-color: var(--color-yellow-highlight);
   }
 
 }

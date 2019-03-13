@@ -20,6 +20,11 @@
   width: 5rem !important;
 }
 
+.icon--3, %icon--3 {
+  width: 3rem !important;
+  height: 3rem !important;
+}
+
 .icon--5, %icon--5 {
   width: 5rem !important;
   height: 5rem !important;
@@ -36,7 +41,7 @@
   width: 3.5rem;
   min-width: 3.5rem;
   height: 3.5rem;
-  border: .2rem solid $black;
+  border: .2rem solid var(--color-black);
   padding: .2rem;
   overflow: hidden;
   object-fit: cover;

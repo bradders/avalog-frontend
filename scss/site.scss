@@ -1,19 +1,44 @@
 /*------------------------------------*\
     $Site
 \*------------------------------------*/
+:root {
+  --color-body-copy: #333333;
+  --color-background: #ffffff;
+  --color-border: #eaedf2;
+  --color-button-border: #d9d9d9;
+  --color-black: #2d2d2d;
+  --color-white: #ffffff;
+  --color-grey: #f5f5f5;
+  --color-yellow-highlight: #fffdd1;
+  --color-focus-gold: rgb(229, 151, 0);
+  --color-red-error: #e4b2ad;
+  --color-red-error-alt: #f8ebea;
+  --color-green-success: #1bb934;
+  --color-progress-bg: #f3f5f9;
+  --color-progress-likelihood: #0c8cc6;
+  --color-progress-size: #01bade;
+  --border-radius: .4rem;
+  --font-default: "Interface Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-bold: "Interface Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-extra-bold: "Interface Extra Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  //border-color: #e4b2ad;
+  //background-color: #f8ebea;
+}
+
 html {
   font-size: 62.5%;
   font-weight: 300;
   text-rendering: optimizeLegibility;
-  outline-color: $yellow-highlight;
 }
 
 body {
-  font-family: $font-base-stack;
+  font-family: var(--font-default);
   @include font-size(18);
   line-height: 1.5;
   text-size-adjust: 100%;
-  color: $body-copy;
+  color: var(--color-body-copy);
+  background-color: var(--color-background);
 }
 
 img {
@@ -21,14 +46,60 @@ img {
   max-width: 100%;
 }
 
+.page {
+  padding-top: 2rem;
+
+  @media #{$medium-up} {
+    padding-top: 12rem;
+  }
+
+}
+
 .site__main {
-  //padding: 3rem;
+  padding-bottom: 8rem;
+
+  @media #{$medium-up} {
+    padding-bottom: 0;
+  }
+
 }
 
 ::selection {
-  background: $yellow-highlight;
+  background: var(--color-yellow-highlight);
 }
 
 ::-moz-selection {
-  background: $yellow-highlight;
+  background: var(--color-yellow-highlight);
+}
+
+figure {
+  margin-bottom: 2rem;
+
+  img {
+    height: auto !important;
+  }
+
+}
+
+figcaption {
+  margin-top: 1rem;
+  @include font-size(14);
+}
+
+a, button, input, select, textarea {
+
+  &:focus {
+    outline: 2px dashed var(--color-focus-gold);
+    outline-offset: -.4rem;
+  }
+
+}
+
+hr {
+  display: block;
+  width: 100%;
+  height: .2rem;
+  border: 0;
+  background-color: var(--color-border);
+  margin: 2rem 0;
 }
